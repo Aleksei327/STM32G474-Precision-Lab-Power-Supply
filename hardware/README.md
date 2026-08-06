@@ -44,3 +44,7 @@ Two things worth knowing if you edit them: one VRML unit is 2.54 mm, the model Y
 ## Netlist generator
 
 The schematic was not drawn by hand first: `netlist/lab_psu_skidl.py` builds the circuit in SKiDL, and the resulting netlist is the reference that both the schematic and the board are verified against. If you change the circuit there, note that new parts must be appended at the **end** of the script — inserting them in the middle renumbers every later reference designator and silently desynchronises the board.
+
+## Firmware
+
+Not included. The firmware is not published yet, and this hardware does not operate without it — see [NOTICE.md](../NOTICE.md).

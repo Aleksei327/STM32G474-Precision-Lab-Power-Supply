@@ -61,6 +61,16 @@ The complete KiCad 10 project is in [`hardware/`](hardware/README.md): schematic
 
 ⚠️ The boards are drawn for home etching: **every drill hole in the file is a 0.6 mm pilot** that is opened up by hand afterwards. Restore the real diameters before sending these files to a fab.
 
+## License and reuse
+
+The documentation, the schematic and the hardware design files are published under [CC BY-NC-ND 4.0](LICENSE): read them, study them, share them with attribution, but no commercial use and no publishing of modified versions. **Building a single unit for your own private use is explicitly permitted** — the exact terms are in [NOTICE.md](NOTICE.md).
+
+**The firmware is not published.** The hardware does not run without it, so if you build this board the control software is yours to write. Firmware and a video of the working device will follow once the hardware has been built and tested.
+
+## Author
+
+Aleksei Subbotin — embedded electronics and power control, France / remote. Open to freelance and contract work: [github.com/Aleksei327](https://github.com/Aleksei327) · <alsubfr@hotmail.com>
+
 ## Safety
 
 This project contains rectified mains and an approximately 380 V DC bus. It is an engineering prototype, not a certified product. Construction and testing require appropriate isolation, current limiting, discharge procedures, protective equipment, and experience with lethal-voltage power electronics.
