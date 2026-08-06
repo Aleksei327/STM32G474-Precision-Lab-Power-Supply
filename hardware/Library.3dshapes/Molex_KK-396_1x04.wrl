@@ -1,0 +1,102 @@
+#VRML V2.0 utf8
+# Generated for the Precision Lab PSU project
+
+Transform { translation 2.3386 0.0394 0.3543 children [ Shape {
+  appearance Appearance { material Material {
+  diffuseColor 0.850 0.850 0.850
+  specularColor 0.10 0.10 0.10
+  shininess 0.20
+  ambientIntensity 0.3
+} }
+  geometry Box { size 6.1811 3.9370 0.7087 }
+} ] }
+Transform { translation 2.3386 -1.7323 2.0079 children [ Shape {
+  appearance Appearance { material Material {
+  diffuseColor 0.850 0.850 0.850
+  specularColor 0.10 0.10 0.10
+  shininess 0.20
+  ambientIntensity 0.3
+} }
+  geometry Box { size 6.1811 0.3937 4.0157 }
+} ] }
+Transform { translation 2.3386 1.8110 2.0079 children [ Shape {
+  appearance Appearance { material Material {
+  diffuseColor 0.850 0.850 0.850
+  specularColor 0.10 0.10 0.10
+  shininess 0.20
+  ambientIntensity 0.3
+} }
+  geometry Box { size 6.1811 0.3937 4.0157 }
+} ] }
+Transform { translation -0.5551 0.0394 2.0079 children [ Shape {
+  appearance Appearance { material Material {
+  diffuseColor 0.850 0.850 0.850
+  specularColor 0.10 0.10 0.10
+  shininess 0.20
+  ambientIntensity 0.3
+} }
+  geometry Box { size 0.3937 3.9370 4.0157 }
+} ] }
+Transform { translation 5.2323 0.0394 2.0079 children [ Shape {
+  appearance Appearance { material Material {
+  diffuseColor 0.850 0.850 0.850
+  specularColor 0.10 0.10 0.10
+  shininess 0.20
+  ambientIntensity 0.3
+} }
+  geometry Box { size 0.3937 3.9370 4.0157 }
+} ] }
+Transform { translation 0.0000 0.0000 1.2795 children [ Shape {
+  appearance Appearance { material Material {
+  diffuseColor 0.750 0.550 0.250
+  specularColor 0.60 0.60 0.60
+  shininess 0.60
+  ambientIntensity 0.3
+} }
+  geometry Box { size 0.4488 0.4488 4.5276 }
+} ] }
+Transform { translation 1.5591 0.0000 1.2795 children [ Shape {
+  appearance Appearance { material Material {
+  diffuseColor 0.750 0.550 0.250
+  specularColor 0.60 0.60 0.60
+  shininess 0.60
+  ambientIntensity 0.3
+} }
+  geometry Box { size 0.4488 0.4488 4.5276 }
+} ] }
+Transform { translation 3.1181 0.0000 1.2795 children [ Shape {
+  appearance Appearance { material Material {
+  diffuseColor 0.750 0.550 0.250
+  specularColor 0.60 0.60 0.60
+  shininess 0.60
+  ambientIntensity 0.3
+} }
+  geometry Box { size 0.4488 0.4488 4.5276 }
+} ] }
+Transform { translation 4.6772 0.0000 1.2795 children [ Shape {
+  appearance Appearance { material Material {
+  diffuseColor 0.750 0.550 0.250
+  specularColor 0.60 0.60 0.60
+  shininess 0.60
+  ambientIntensity 0.3
+} }
+  geometry Box { size 0.4488 0.4488 4.5276 }
+} ] }
+Transform { translation 2.3386 1.1024 1.9685 children [ Shape {
+  appearance Appearance { material Material {
+  diffuseColor 0.850 0.850 0.850
+  specularColor 0.10 0.10 0.10
+  shininess 0.20
+  ambientIntensity 0.3
+} }
+  geometry Box { size 4.7638 0.5118 2.3622 }
+} ] }
+Transform { translation 2.3386 0.9055 3.3858 children [ Shape {
+  appearance Appearance { material Material {
+  diffuseColor 0.850 0.850 0.850
+  specularColor 0.10 0.10 0.10
+  shininess 0.20
+  ambientIntensity 0.3
+} }
+  geometry Box { size 4.7638 0.9055 0.5118 }
+} ] }

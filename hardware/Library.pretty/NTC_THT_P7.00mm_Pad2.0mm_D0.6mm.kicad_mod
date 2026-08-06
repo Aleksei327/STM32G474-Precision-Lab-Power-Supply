@@ -1,0 +1,172 @@
+(footprint "NTC_THT_P7.00mm_Pad2.0mm_D0.6mm"
+	(version 20260206)
+	(generator "pcbnew")
+	(generator_version "10.0")
+	(layer "F.Cu")
+	(descr "NTC thermistor, THT, leads soldered directly into the board (not removable, no connector). Pad pitch 7.0 mm, round pads 2.0 mm, drill 0.6 mm per project rule (home-etched boards are drilled 0.6 and enlarged by hand). Mount the bead on the pass-element heatsink on wires.")
+	(tags "NTC thermistor THT handmade heatsink-sensor")
+	(property "Reference" "REF**"
+		(at 3.81 -1.92 0)
+		(layer "F.SilkS")
+		(uuid "48b0a15f-b776-4126-94b7-e0cc09c47fa4")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Value" "NTC"
+		(at 3.81 1.92 0)
+		(layer "F.Fab")
+		(uuid "9c55ed40-8a92-4588-a847-d1e3fa659efa")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Datasheet" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "aa811caf-d3ff-4b8c-a404-e2c8a306e3ac")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(property "Description" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "0c2e4a73-3082-4529-8e5b-9e5be7a4e3a7")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(property "KiLib_Generator" "resistor/THT"
+		(at 0 0 0)
+		(layer "F.SilkS")
+		(hide yes)
+		(uuid "571d8538-526d-4b03-91c0-c658dc66c469")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(attr through_hole)
+	(duplicate_pad_numbers_are_jumpers no)
+	(fp_line
+		(start 0.94 0)
+		(end 1.89 0)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "81957234-e0e2-4976-9b0a-9e6a0082e24a")
+	)
+	(fp_line
+		(start 6.68 0)
+		(end 5.73 0)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "148abbb8-1f40-4b66-b3d4-19b483b9ddde")
+	)
+	(fp_rect
+		(start 1.89 -0.92)
+		(end 5.73 0.92)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(fill no)
+		(layer "F.SilkS")
+		(uuid "94995524-5e26-42d2-8816-69d259d00e5d")
+	)
+	(fp_rect
+		(start -0.95 -1.05)
+		(end 8.57 1.05)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(fill no)
+		(layer "F.CrtYd")
+		(uuid "0fcac4af-28ba-4715-af05-cd2531fd016a")
+	)
+	(fp_line
+		(start 0 0)
+		(end 2.01 0)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "9da86845-d97e-4187-9ae9-4fa6b334c2f0")
+	)
+	(fp_line
+		(start 7.62 0)
+		(end 5.61 0)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "1ed3abab-2b2d-400d-99d6-f835ea198acb")
+	)
+	(fp_rect
+		(start 2.01 -0.8)
+		(end 5.61 0.8)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(fill no)
+		(layer "F.Fab")
+		(uuid "c12401d4-1214-4bc1-b098-2183d896d74d")
+	)
+	(fp_text user "${REFERENCE}"
+		(at 3.81 0 0)
+		(layer "F.Fab")
+		(uuid "92bdb87d-2189-42f2-a98a-07bbb6638e9a")
+		(effects
+			(font
+				(size 0.72 0.72)
+				(thickness 0.108)
+			)
+		)
+	)
+	(pad "1" thru_hole circle
+		(at -3.5 0)
+		(size 2 2)
+		(drill 0.6)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "269d9cdb-4e4e-4059-b2d1-052cf7bc4f87")
+	)
+	(pad "2" thru_hole circle
+		(at 3.5 0)
+		(size 2 2)
+		(drill 0.6)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "9c86a2f1-1c89-47aa-bcda-25eb7e16c660")
+	)
+	(embedded_fonts no)
+	(model "${KIPRJMOD}/Library.3dshapes/NTC_bead.wrl"
+		(offset (xyz 0 0 0))
+		(scale (xyz 1 1 1))
+		(rotate (xyz 0 0 0))
+	)
+)

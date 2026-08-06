@@ -1,0 +1,123 @@
+(footprint "L_Toroid_Vertical_Core21x7mm_P10.00mm_D2.0mm"
+	(version 20260206)
+	(generator "pcbnew")
+	(generator_version "10.0")
+	(layer "F.Cu")
+	(descr "Toroid inductor mounted VERTICALLY (ring standing on edge). Small green iron-powder core from ATX PSU, bare core approx. 21x7 mm, wound OD approx. 25 mm / width 11 mm (2x0.9 mm wire). Lead pitch 10 mm, 6 mm round pads with 2.0 mm drill; oversized pads suit single-sided home-etched boards. Secure the ring with glue.")
+	(tags "inductor toroid vertical ATX iron-powder handmade 6uH")
+	(property "Reference" "REF**"
+		(at 0 -8 0)
+		(layer "F.SilkS")
+		(uuid "3ec46672-81bb-4f77-8db3-48ec6172470c")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Value" "L"
+		(at 0 9 0)
+		(layer "F.Fab")
+		(uuid "48a1f7e9-38f8-4b28-a8b9-fdb6af018c7b")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Datasheet" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "2f96f168-44c9-4830-8770-9f7276a1ed4c")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(property "Description" "Inductor"
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "90b5abe8-d772-453d-a165-cce1fb75876d")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(property "KiLib_Generator" "choke_THT"
+		(at 0 0 0)
+		(layer "F.SilkS")
+		(hide yes)
+		(uuid "7fe96a79-9b08-4121-a358-695494298917")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(sheetname "/")
+	(sheetfile "POWER_0-50.kicad_sch")
+	(attr through_hole)
+	(duplicate_pad_numbers_are_jumpers no)
+	(fp_rect
+		(start -3.5 -10.5)
+		(end 3.5 10.5)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(fill no)
+		(layer "F.SilkS")
+		(uuid "a4378733-3332-438c-98f5-7f320b8606a1")
+	)
+	(fp_rect
+		(start -6.0 -14.0)
+		(end 6.0 14.0)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(fill no)
+		(layer "F.CrtYd")
+		(uuid "ab56960e-a462-49ea-abea-a109bcfb06c1")
+	)
+	(fp_text user "${REFERENCE}"
+		(at 0 0 270)
+		(layer "F.Fab")
+		(uuid "3edd6db1-d188-46a4-a13e-5f984b3742da")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(pad "1" thru_hole circle
+		(at -5 0)
+		(size 6 6)
+		(drill 0.6)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "7963b5ff-7520-48e1-bc9a-21b8ed8c6646")
+	)
+	(pad "2" thru_hole circle
+		(at 5 0)
+		(size 6 6)
+		(drill 0.6)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "e92460ca-760d-41b4-a211-069ae7c067c0")
+	)
+	(embedded_fonts no)
+	(model "${KIPRJMOD}/Library.3dshapes/Toroid_L3_wound_OD25.wrl"
+		(offset (xyz 0.00 0.00 0.00))
+		(scale (xyz 1 1 1))
+		(rotate (xyz 0 0 0))
+	)
+)

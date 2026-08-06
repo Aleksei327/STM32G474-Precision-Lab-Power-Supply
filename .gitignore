@@ -1,0 +1,15 @@
+# KiCad working files
+*.kicad_prl
+*.bak
+*.bak[0-9]*
+*.kicad_pcb.bak*
+*.kicad_sch.bak*
+*-backups/
+fp-info-cache
+~*
+# Python
+__pycache__/
+*.pyc
+
+# local working draft, not published
+docs/PS_0-50.txt

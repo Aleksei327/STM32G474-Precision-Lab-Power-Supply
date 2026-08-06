@@ -1,0 +1,75 @@
+#VRML V2.0 utf8
+# Generated for the Precision Lab PSU project
+
+Transform { translation 0.0000 -1.5748 5.5118 children [ Shape {
+  appearance Appearance { material Material {
+  diffuseColor 0.620 0.640 0.660
+  specularColor 0.35 0.35 0.35
+  shininess 0.45
+  ambientIntensity 0.3
+} }
+  geometry Box { size 7.8740 1.5748 11.0236 }
+} ] }
+Transform { translation 0.0000 0.7874 1.0433 children [ Shape {
+  appearance Appearance { material Material {
+  diffuseColor 0.480 0.500 0.520
+  specularColor 0.25 0.25 0.25
+  shininess 0.30
+  ambientIntensity 0.3
+} }
+  geometry Box { size 7.8740 3.1496 0.5118 }
+} ] }
+Transform { translation 0.0000 0.7874 2.6181 children [ Shape {
+  appearance Appearance { material Material {
+  diffuseColor 0.480 0.500 0.520
+  specularColor 0.25 0.25 0.25
+  shininess 0.30
+  ambientIntensity 0.3
+} }
+  geometry Box { size 7.8740 3.1496 0.5118 }
+} ] }
+Transform { translation 0.0000 0.7874 4.1929 children [ Shape {
+  appearance Appearance { material Material {
+  diffuseColor 0.480 0.500 0.520
+  specularColor 0.25 0.25 0.25
+  shininess 0.30
+  ambientIntensity 0.3
+} }
+  geometry Box { size 7.8740 3.1496 0.5118 }
+} ] }
+Transform { translation 0.0000 0.7874 5.7677 children [ Shape {
+  appearance Appearance { material Material {
+  diffuseColor 0.480 0.500 0.520
+  specularColor 0.25 0.25 0.25
+  shininess 0.30
+  ambientIntensity 0.3
+} }
+  geometry Box { size 7.8740 3.1496 0.5118 }
+} ] }
+Transform { translation 0.0000 0.7874 7.3425 children [ Shape {
+  appearance Appearance { material Material {
+  diffuseColor 0.480 0.500 0.520
+  specularColor 0.25 0.25 0.25
+  shininess 0.30
+  ambientIntensity 0.3
+} }
+  geometry Box { size 7.8740 3.1496 0.5118 }
+} ] }
+Transform { translation 0.0000 0.7874 8.9173 children [ Shape {
+  appearance Appearance { material Material {
+  diffuseColor 0.480 0.500 0.520
+  specularColor 0.25 0.25 0.25
+  shininess 0.30
+  ambientIntensity 0.3
+} }
+  geometry Box { size 7.8740 3.1496 0.5118 }
+} ] }
+Transform { translation 0.0000 0.7874 10.4921 children [ Shape {
+  appearance Appearance { material Material {
+  diffuseColor 0.480 0.500 0.520
+  specularColor 0.25 0.25 0.25
+  shininess 0.30
+  ambientIntensity 0.3
+} }
+  geometry Box { size 7.8740 3.1496 0.5118 }
+} ] }

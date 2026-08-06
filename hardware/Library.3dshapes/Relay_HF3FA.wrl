@@ -1,0 +1,12 @@
+#VRML V2.0 utf8
+# Generated for the Precision Lab PSU project
+
+Transform { translation 0.0000 0.0000 2.3622 children [ Shape {
+  appearance Appearance { material Material {
+  diffuseColor 0.100 0.100 0.100
+  specularColor 0.10 0.10 0.10
+  shininess 0.20
+  ambientIntensity 0.3
+} }
+  geometry Box { size 6.1024 4.1339 4.7244 }
+} ] }

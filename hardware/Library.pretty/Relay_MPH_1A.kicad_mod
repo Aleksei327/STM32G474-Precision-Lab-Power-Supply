@@ -1,0 +1,148 @@
+(footprint "Relay_MPH_1A"
+	(version 20260206)
+	(generator "pcbnew")
+	(generator_version "10.0")
+	(layer "F.Cu")
+	(descr "MEISHUO MPH-S-112-A 1 Form A relay, per datasheet p.2 fig 1A (bottom view mirrored): coil A1/A2 outer pins pitch 12mm; contact 13 middle, OFFSET 2mm inward; contact 14 single pin 12.2mm from A1/A2 column, in row with A1; holes 1.4mm; body 21x16mm")
+	(tags "relay MPH MEISHUO 1A")
+	(attr through_hole)
+	(property "Reference" "REF**"
+		(at 6 -3.5 0)
+		(layer "F.SilkS")
+		(uuid "15b2cad3-38f6-44d7-a589-69c198bec9ae")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Value" "MPH-S-112-A-2F"
+		(at 6 15.5 0)
+		(layer "F.Fab")
+		(uuid "f42b4db6-097c-49b9-bf87-dafe8ec8a91d")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(pad "14" thru_hole circle
+		(at 0.00 0.00)
+		(size 3.2 3.2)
+		(drill 0.6)
+		(layers "*.Cu" "*.Mask")
+		(uuid "feba37e2-1451-4ef8-8d87-8670da8abd90")
+	)
+	(fp_text user "14"
+		(at 2.40 0.00 0)
+		(layer "F.Fab")
+		(uuid "068b9653-475b-4f61-9a93-4c0e14ad129e")
+		(effects
+			(font
+				(size 0.8 0.8)
+				(thickness 0.12)
+			)
+		)
+	)
+	(pad "A1" thru_hole circle
+		(at 12.20 0.00)
+		(size 3.2 3.2)
+		(drill 0.6)
+		(layers "*.Cu" "*.Mask")
+		(uuid "498e360f-81e9-43c8-87fe-d2436ba72464")
+	)
+	(fp_text user "A1"
+		(at 14.60 0.00 0)
+		(layer "F.Fab")
+		(uuid "4cc3bab5-50c8-4c44-a109-5c6945093908")
+		(effects
+			(font
+				(size 0.8 0.8)
+				(thickness 0.12)
+			)
+		)
+	)
+	(pad "13" thru_hole circle
+		(at 14.20 6.00)
+		(size 3.2 3.2)
+		(drill 0.6)
+		(layers "*.Cu" "*.Mask")
+		(uuid "b86d9adf-c097-4151-adfc-cd7e05982394")
+	)
+	(fp_text user "13"
+		(at 16.60 6.00 0)
+		(layer "F.Fab")
+		(uuid "adf7ef15-a4d1-4b97-ad5b-4cd07caa1c22")
+		(effects
+			(font
+				(size 0.8 0.8)
+				(thickness 0.12)
+			)
+		)
+	)
+	(pad "A2" thru_hole circle
+		(at 12.20 12.00)
+		(size 3.2 3.2)
+		(drill 0.6)
+		(layers "*.Cu" "*.Mask")
+		(uuid "0dc96fe4-091c-4b3d-86b4-0e00c29b2b40")
+	)
+	(fp_text user "A2"
+		(at 14.60 12.00 0)
+		(layer "F.Fab")
+		(uuid "2e483a6e-6f28-4768-9c43-62fd6c23dd69")
+		(effects
+			(font
+				(size 0.8 0.8)
+				(thickness 0.12)
+			)
+		)
+	)
+	(fp_line
+		(start -4.80 -2.00)
+		(end 16.20 -2.00)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "80f931fb-721f-4ee2-b6e4-fcb885b85c20")
+	)
+	(fp_line
+		(start 16.20 -2.00)
+		(end 16.20 14.00)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "43c2180e-1033-49ed-959f-3c8d656392d8")
+	)
+	(fp_line
+		(start 16.20 14.00)
+		(end -4.80 14.00)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "8ee65a30-027e-457d-b640-2cf6613e5df1")
+	)
+	(fp_line
+		(start -4.80 14.00)
+		(end -4.80 -2.00)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "70757ee5-15e0-4bb2-ac58-d17eab06d1cd")
+	)
+	(model "${KIPRJMOD}/Library.3dshapes/Relay_MPH_S112A.wrl"
+		(offset (xyz 10.60 -6.00 0.00))
+		(scale (xyz 1 1 1))
+		(rotate (xyz 0 0 0))
+	)
+)

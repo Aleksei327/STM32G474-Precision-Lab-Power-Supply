@@ -4,7 +4,7 @@
 
 A hardware development project for a galvanically isolated, fully programmable laboratory power supply. The design combines a tracking synchronous buck preregulator with a fast linear post-regulator to provide high efficiency without giving up low output noise.
 
-> **Development status:** the electrical schematic is complete for the current revision. PCB layout and firmware are in development. The limits below are design targets and have not yet been fully verified on finished hardware.
+> **Development status:** the schematic and the PCB layout are complete for this revision and the KiCad sources are published. Firmware is in development, and no board has been etched or brought up yet — every figure below is a design target, not a measurement.
 
 ## Target specifications
 
@@ -14,8 +14,9 @@ A hardware development project for a galvanically isolated, fully programmable l
 | Voltage setting increment | approximately 0.84 mV; 1 mV user step |
 | Current setting increment | 1 mA in firmware |
 | Output ripple | no more than 1 mV target |
-| Present transformer capability | approximately 5–6 A continuous, 8 A peak |
-| Power-stage design target | up to 10 A after the transformer upgrade |
+| Present transformer capability | approximately 5–6 A continuous, 8 A peak — the limiting element today |
+| Pass-element thermal budget | 7 A continuous with the current heatsink and a silicone insulator; 10 A in short bursts under NTC foldback |
+| Power-stage design target | up to 10 A after the transformer rewind (a mica insulator is then required on the pass FET) |
 | Operating modes | CV, digital CC, programmable foldback, controlled output ramps |
 | Controller | STM32G474 |
 | Voltage reference and DAC | REF5025 + 16-bit DAC8830 |
@@ -28,6 +29,14 @@ The schematic is an A1 sheet. Open the SVG directly for lossless zoom.
 [![Full laboratory PSU schematic in English](docs/images/lab-psu-schematic-en.svg)](docs/images/lab-psu-schematic-en.svg)
 
 [Russian schematic](docs/images/lab-psu-schematic-ru.svg)
+
+## Boards
+
+Two home-etched single-sided boards: a main board of about 260 × 152 mm and an auxiliary flyback board that generates the +67 V / −5 V rails for the post-regulator. Connections that cannot be routed on one copper layer are made with 25 documented wire jumpers.
+
+[![Both boards, top view](docs/images/boards-3d-overview.png)](docs/pcb.md)
+
+[More views, layout details and the conventions used → PCB page](docs/pcb.md)
 
 ## How it works
 
@@ -43,7 +52,14 @@ The output stage also includes reverse-polarity detection, external-voltage dete
 
 - [System architecture and protection design](docs/architecture.md)
 - [Auxiliary +67 V / −5 V flyback converter](docs/auxiliary-flyback.md)
+- [PCB design and boards](docs/pcb.md)
 - [Русская техническая документация](README.ru.md)
+
+## Hardware sources
+
+The complete KiCad 10 project is in [`hardware/`](hardware/README.md): schematic, layout, the project footprint library, hand-written 3D models with the Python scripts that generate them, and the SKiDL script the netlist is built from.
+
+⚠️ The boards are drawn for home etching: **every drill hole in the file is a 0.6 mm pilot** that is opened up by hand afterwards. Restore the real diameters before sending these files to a fab.
 
 ## Safety
 
