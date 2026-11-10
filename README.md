@@ -4,7 +4,11 @@
 
 A hardware development project for a galvanically isolated, fully programmable laboratory power supply. The design combines a tracking synchronous buck preregulator with a fast linear post-regulator to provide high efficiency without giving up low output noise.
 
-> **Development status:** the schematic and the PCB layout are complete for this revision and the KiCad sources are published. Firmware is in development, and no board has been etched or brought up yet — every figure below is a design target, not a measurement.
+> **Development status (November 2026):** both boards are etched, assembled and powered up, and the device runs on bring-up firmware. Verified on the bench so far: the auxiliary rails, the linear post-regulator and the synchronous buck without load. Tests under load in amps, the current limit and calibration are still ahead, so the specification table below lists design targets; measured values are in [First measurements](#first-measurements). The KiCad sources published here are the August 2026 revision — fixes found during bring-up are not merged yet.
+
+![Assembled main and auxiliary boards on the bench with the display showing the bring-up firmware](docs/images/bench-assembled-boards.jpg)
+
+*The assembled boards on the bench: main board, auxiliary flyback board, and the display on the diagnostics page of the bring-up firmware (55 V input switched off for the photo).*
 
 ## Target specifications
 
@@ -22,6 +26,20 @@ A hardware development project for a galvanically isolated, fully programmable l
 | Voltage reference and DAC | REF5025 + 16-bit DAC8830 |
 | Voltage/current monitor | 20-bit INA228 with a Kelvin-connected 10 mΩ shunt |
 
+## First measurements
+
+Bring-up results from 9 November 2026, taken with bring-up firmware and before any calibration.
+
+| Test | Result |
+| --- | --- |
+| Linear stage, 10.000 V setpoint into 1.5 kΩ | 10.088 V on the INA228, drift within ±2 mV over one minute; the +0.9 % offset is the uncalibrated reference |
+| Zero setpoint | 0.003 V at the output |
+| Buck stage, no load, 100 kHz, 55.6 V input | pass-FET drain voltage follows pulse length linearly from 12.5 V to 27.2 V |
+| Buck switching node | clean rectangle, 58.8 V peak (about 3 V overshoot), no missed pulses |
+| Buck no-load input power at 49 % pulse length | about 6.4 W, mostly inductor core loss — under investigation |
+
+Not tested yet: load currents in amps, current metering scale, the tracking loop, current limit, short-circuit protection in operation, and output above 25 V.
+
 ## Full schematic
 
 The schematic is an A1 sheet. Open the SVG directly for lossless zoom.
@@ -35,6 +53,10 @@ The schematic is an A1 sheet. Open the SVG directly for lossless zoom.
 Two home-etched single-sided boards: a main board of about 260 × 152 mm and an auxiliary flyback board that generates the +67 V / −5 V rails for the post-regulator. Connections that cannot be routed on one copper layer are made with 25 documented wire jumpers.
 
 [![Both boards, top view](docs/images/boards-3d-overview.png)](docs/pcb.md)
+
+![Copper side of the etched main board](docs/images/bench-copper-side.jpg)
+
+*Copper side of the etched and assembled main board.*
 
 [More views, layout details and the conventions used → PCB page](docs/pcb.md)
 

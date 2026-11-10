@@ -6,7 +6,7 @@
 
 The power supply is designed for a programmable 0–50 V output with 1 mV and 1 mA user-setting increments and a target output ripple of no more than 1 mV. Efficiency and low noise are combined by splitting regulation between a switching preregulator and a fast analog post-regulator.
 
-These figures are design targets. PCB layout, firmware, thermal characterization, loop compensation, and final electrical validation are still in progress.
+These figures are design targets. The hardware is assembled and in bring-up (November 2026); load testing, thermal characterization, loop compensation, and final electrical validation are still in progress.
 
 ## Power path
 
@@ -121,8 +121,8 @@ An NTC on the pass-device heatsink provides fan control, foldback, and firmware 
 | System architecture | defined |
 | Current electrical schematic | complete |
 | English schematic annotations | available |
-| PCB layout | in development |
-| Firmware | in development |
-| Loop compensation and thermal tuning | pending hardware bring-up |
+| PCB layout | complete, boards etched and assembled |
+| Firmware | bring-up firmware running, production firmware in development |
+| Loop compensation and thermal tuning | bring-up in progress |
 | Final accuracy, ripple, transient, and protection validation | pending |
 

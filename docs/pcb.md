@@ -2,7 +2,7 @@
 
 [Русская версия](pcb.ru.md) · [Back to the project overview](../README.md)
 
-> **Status:** layout is complete and the KiCad sources are published, but no board has been etched or brought up yet. Everything below describes the design intent, not measured hardware.
+> **Status:** both boards have been etched and assembled (November 2026) and the device is in bring-up; see the photos and first measurements in the [README](../README.md). The renders and files on this page are the August 2026 layout revision — fixes found during bring-up are not merged yet.
 
 ## Two boards
 
