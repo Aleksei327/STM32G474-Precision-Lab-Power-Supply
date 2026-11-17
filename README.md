@@ -4,7 +4,7 @@
 
 A hardware development project for a galvanically isolated, fully programmable laboratory power supply. The design combines a tracking synchronous buck preregulator with a fast linear post-regulator to provide high efficiency without giving up low output noise.
 
-> **Development status (November 2026):** both boards are etched, assembled and powered up, and the device runs on bring-up firmware. Verified on the bench so far: the auxiliary rails, the linear post-regulator and the synchronous buck without load. Tests under load in amps, the current limit and calibration are still ahead, so the specification table below lists design targets; measured values are in [First measurements](#first-measurements). The KiCad sources published here are the August 2026 revision — fixes found during bring-up are not merged yet.
+> **Development status (17 November 2026): the power supply is running and working.** Both boards are assembled and powered up; the synchronous buck preregulator with its tracking loop, the linear post-regulator and the digital current limit all work under load. Verified on the bench so far: regulated output from near zero to 50 V into a resistive load, a 35-minute run at 50 V / 0.63 A with the output held within 49.998–50.001 V, and the current limit holding from 1 mA to 1.5 A. Testing and assembly are in progress: operation at several amps, short-circuit behaviour, and accuracy measurements against a reference meter are next. Until those results are published, the specification table below lists design targets. The KiCad sources here are still the August 2026 revision — fixes found during bring-up are not merged yet.
 
 ![Assembled main and auxiliary boards on the bench with the display showing the bring-up firmware](docs/images/bench-assembled-boards.jpg)
 
@@ -38,7 +38,51 @@ Bring-up results from 9 November 2026, taken with bring-up firmware and before a
 | Buck switching node | clean rectangle, 58.8 V peak (about 3 V overshoot), no missed pulses |
 | Buck no-load input power at 49 % pulse length | about 6.4 W, mostly inductor core loss — under investigation |
 
-Not tested yet: load currents in amps, current metering scale, the tracking loop, current limit, short-circuit protection in operation, and output above 25 V.
+Since then (17 November 2026) the tracking loop, the current limit and output up to 50 V have been verified under load — see the status note above. Still ahead: load currents of several amps, short-circuit protection in operation, and calibrated accuracy measurements.
+
+## The working device (November 2026)
+
+Photos from the bench on 17 November 2026, English interface. The PC control panel is part of the unpublished firmware and software package.
+
+![The bench during testing: the main board (copper side up) with its auxiliary boards, the display and the oscilloscope](docs/images/running-01-bench-overview.jpg)
+
+*The bench during testing: the main board (copper side up) with its auxiliary boards, the display and the oscilloscope.*
+
+![The device display, Bench page: 12.000 V / 0.1501 A into a resistive load, buck at 150 kHz tracking the output](docs/images/running-02-device-display-bench-page.jpg)
+
+*The device display, Bench page: 12.000 V / 0.1501 A into a resistive load, buck at 150 kHz tracking the output.*
+
+![PC control panel, Bench tab: setpoint, current limit and a live trace of output voltage and current](docs/images/running-03-panel-bench.jpg)
+
+*PC control panel, Bench tab: setpoint, current limit and a live trace of output voltage and current.*
+
+![Device screen tab: a live mirror of the instrument display, controlled from the PC](docs/images/running-04-panel-device-screen-mirror.jpg)
+
+*Device screen tab: a live mirror of the instrument display, controlled from the PC.*
+
+![Screen mock-up tab: the new main screen (CV/CC, OCP) running on live data](docs/images/running-05-panel-screen-mockup.jpg)
+
+*Screen mock-up tab: the new main screen (CV/CC, OCP) running on live data.*
+
+![Service tab: buck, auxiliary rails, INA228 metering and protection diagnostics](docs/images/running-06-panel-service.jpg)
+
+*Service tab: buck, auxiliary rails, INA228 metering and protection diagnostics.*
+
+![Charts tab: output voltage, current and temperatures](docs/images/running-07-panel-charts.jpg)
+
+*Charts tab: output voltage, current and temperatures.*
+
+![Sounds tab: the event sounds of the device](docs/images/running-08-panel-sounds.jpg)
+
+*Sounds tab: the event sounds of the device.*
+
+![48 V setpoint into an 80 Ω test load](docs/images/running-09-panel-48V.jpg)
+
+*48 V setpoint into an 80 Ω test load.*
+
+![3.3 V setpoint into the same load](docs/images/running-10-panel-3V3.jpg)
+
+*3.3 V setpoint into the same load.*
 
 ## Full schematic
 
