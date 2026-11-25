@@ -42,7 +42,7 @@ Since then (17 November 2026) the tracking loop, the current limit and output up
 
 ## The working device (November 2026)
 
-Photos from the bench on 17 November 2026, English interface. The PC control panel is part of the unpublished firmware and software package.
+Photos from the bench on 17 November 2026, English interface. The PC control program is available as a download — see [Firmware and PC program](#firmware-and-pc-program).
 
 ![The bench during testing: the main board (copper side up) with its auxiliary boards, the display and the oscilloscope](docs/images/running-01-bench-overview.jpg)
 
@@ -83,6 +83,16 @@ Photos from the bench on 17 November 2026, English interface. The PC control pan
 ![3.3 V setpoint into the same load](docs/images/running-10-panel-3V3.jpg)
 
 *3.3 V setpoint into the same load.*
+
+## Firmware and PC program
+
+**Download: [Releases](https://github.com/Aleksei327/STM32G474-Precision-Lab-Power-Supply/releases)** — the PC program for Windows, Linux and macOS, the firmware update file (`.dpfw`, uploaded from the program over USB) and the full image for a first installation on a blank STM32G474. The source code is closed; binaries only.
+
+| Without a key | With a key — **5 € per device** |
+|---|---|
+| Bench in the program: readings, setpoints, output on/off; current calibration; the device screen and settings; firmware updates; all protections | Engineering mode on the device; the engineering tabs of the program (service, charts, device screen, controls, sounds, console); the charger for Li-ion, Li-ion HV (4.35 V), LiFePO4, lead-acid and NiMH |
+
+Locked tabs can be previewed in the program before buying. To get a key, click **Copy ID** in the program and write to the developer (see [Author](#author)). Payment is by cryptocurrency, bank transfer (IBAN) or card; you get the payment details first and the key once paid.
 
 ## Full schematic
 
@@ -131,7 +141,7 @@ The complete KiCad 10 project is in [`hardware/`](hardware/README.md): schematic
 
 The documentation, the schematic and the hardware design files are published under [CC BY-NC-ND 4.0](LICENSE): read them, study them, share them with attribution, but no commercial use and no publishing of modified versions. **Building a single unit for your own private use is explicitly permitted** — the exact terms are in [NOTICE.md](NOTICE.md).
 
-**The firmware is not published.** The hardware does not run without it, so if you build this board the control software is yours to write. Firmware and a video of the working device will follow once the hardware has been built and tested.
+**The firmware and PC program source code is closed.** Ready-to-use binaries are in [Releases](https://github.com/Aleksei327/STM32G474-Precision-Lab-Power-Supply/releases); the advanced functions are unlocked by a per-device key, see [Firmware and PC program](#firmware-and-pc-program).
 
 ## Author
 
