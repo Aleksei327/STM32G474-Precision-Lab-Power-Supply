@@ -2,14 +2,15 @@
 
 [Русская версия](pcb.ru.md) · [Back to the project overview](../README.md)
 
-> **Status:** both boards have been etched and assembled (November 2026) and the device is in bring-up; see the photos and first measurements in the [README](../README.md). The renders and files on this page are the August 2026 layout revision — fixes found during bring-up are not merged yet.
+> **Status:** both boards have been etched and assembled (November 2026) and the device is working; see the photos in the [README](../README.md). The files and renders on this page are the **v0.2.61 revision (November 2026)**: the main board is now a 4-layer layout with the bring-up fixes merged, and the on-board MP9486A 55 → 12 V stage is replaced by a separate [55 → 12 V board](power-55-12v.md).
 
 ## Two boards
 
 | Board | Size | Contents |
 | --- | --- | --- |
-| Main board | approximately 260 × 152 mm | synchronous buck stage, C–L–C filter, linear post-regulator, metering, protection, output relays, STM32G474 module |
-| Auxiliary board | approximately 148 × 33 mm | UC3845 flyback that generates the +67 V and −5 V rails for the OPA454 post-regulator |
+| Main board | approximately 201 × 116 mm, 4 copper layers | synchronous buck stage, C–L–C filter, linear post-regulator, metering, protection, output relays, STM32G474 module, +12 V input J13 |
+| Auxiliary board | approximately 34 × 82 mm | UC3845 flyback that generates the +67 V and −5 V rails for the OPA454 post-regulator |
+| [55 → 12 V board](power-55-12v.md) | approximately 74 × 41 mm, separate KiCad project | UC3845 buck that supplies +12 V from the 55 V rail |
 
 ![Both boards, top view](images/boards-3d-overview.png)
 
@@ -23,17 +24,9 @@ Both toroidal inductors are ATX-salvage cores, wound and measured rather than bo
 
 ![Main board, power section](images/main-board-3d.png)
 
-## Single-sided by design
+## Copper layers
 
-The board is meant to be etched at home, so all copper is on the bottom layer and the remaining connections are made with insulated wire jumpers on the top side. The jumpers are documented rather than improvised:
-
-- a dedicated `JUMPERS` user layer carries a line for every wire link;
-- [`hardware/jumper-wires.txt`](../hardware/jumper-wires.txt) lists all 25 of them with net names, endpoint coordinates and lengths (about 1.33 m of wire in total);
-- sense pairs are meant to be twisted, and the wires routed clear of the switching node and the inductors.
-
-In the plot below the etched copper is green and the wire jumpers are the red lines.
-
-![Copper layout with wire jumpers](images/pcb-copper-and-jumpers.png)
+The first revision was etched at home on single-sided copper with 25 wire jumpers. Since v0.2.61 the main board is a **4-layer** layout (F.Cu, In1.Cu, In2.Cu, B.Cu), so the jumper list is gone.
 
 ![Solder side](images/boards-3d-solder-side.png)
 
@@ -46,7 +39,7 @@ In the plot below the etched copper is green and the wire jumpers are the red li
 Other project rules:
 
 - SMD passives default to 1206 and SOIC pads are widened to 0.8 mm — everything is meant to be soldered by hand with an iron;
-- exposed pads of the HSOP-8 parts are broken out as normal numbered pads (`UCC27211` EP → GND, `MP9486A` EP → GND, **`OPA454` EP → V− = −5 V**, not ground);
+- exposed pads of the HSOP-8 parts are broken out as normal numbered pads (`UCC27211` EP → GND, **`OPA454` EP → V− = −5 V**, not ground);
 - power traces that carry the output current are reinforced with soldered copper wire rather than drawn wide.
 
 ## Design rule check

@@ -111,7 +111,7 @@ An NTC on the pass-device heatsink provides fan control, foldback, and firmware 
 - `5VSB` powers the control domain and TFT module.
 - The controller module generates 3.3 V for digital logic.
 - REF5025 is filtered and powered from `5VSB`.
-- An MP9486 high-voltage buck converts the approximately 55 V rail to 12 V for the buck driver, relays, fan, and auxiliary converter.
+- A separate [55 → 12 V board](power-55-12v.md) (UC3845 buck) converts the approximately 55 V rail to 12 V for the buck driver, relays, fan, and auxiliary converter; it replaced the on-board MP9486 stage of the first revision.
 - A UC3845 flyback generates the OPA454 rails: approximately +67 V and −5 V. See [Auxiliary flyback converter](auxiliary-flyback.md).
 
 ## Development status

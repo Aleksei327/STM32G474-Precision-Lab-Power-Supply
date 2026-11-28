@@ -10,3 +10,12 @@ Transform { translation 0.0000 0.0000 2.9528 children [ Shape {
 } }
   geometry Box { size 8.2677 6.2992 5.9055 }
 } ] }
+Transform { translation 0.0000 0.0000 5.9646 children [ Shape {
+  appearance Appearance { material Material {
+  diffuseColor 0.100 0.100 0.100
+  specularColor 0.10 0.10 0.10
+  shininess 0.20
+  ambientIntensity 0.3
+} }
+  geometry Box { size 7.7953 5.8268 0.1181 }
+} ] }

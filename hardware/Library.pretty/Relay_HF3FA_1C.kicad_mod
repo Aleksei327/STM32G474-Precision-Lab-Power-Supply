@@ -418,7 +418,7 @@
 		(uuid "4014e80d-65d4-4100-ab62-0004d92d5a43")
 	)
 	(embedded_fonts no)
-	(model "${KICAD10_3DMODEL_DIR}/Relay_THT.3dshapes/Relay_SPDT_SANYOU_SRD_Series_Form_C.step"
+	(model "${KIPRJMOD}/Library.3dshapes/Relay_HF3FA.wrl"
 		(offset
 			(xyz 0 0 0)
 		)

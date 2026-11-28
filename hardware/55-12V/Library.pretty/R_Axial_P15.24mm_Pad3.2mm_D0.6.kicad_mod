@@ -1,0 +1,32 @@
+(footprint "R_Axial_P15.24mm_Pad3.2mm_D0.6"
+	(version 20260206)
+	(generator "pcbnew")
+	(generator_version "10.0")
+	(layer "F.Cu")
+	(descr "Axial resistor 1 W, 15.24 mm pitch, pilot drill 0.6 mm.")
+	(tags "resistor axial shunt")
+	(attr through_hole)
+	(property "Reference" "REF**" (at 0 -2.6 0) (layer "F.SilkS") (effects (font (size 1 1) (thickness 0.15))))
+	(property "Value" "R_Axial_P15.24mm_Pad3.2mm_D0.6" (at 0 2.6 0) (layer "F.Fab") (effects (font (size 1 1) (thickness 0.15))))
+	(pad "1" thru_hole circle (at -7.62 0) (size 3.2 3.2) (drill 0.6) (layers "*.Cu" "*.Mask"))
+	(pad "2" thru_hole circle (at 7.62 0) (size 3.2 3.2) (drill 0.6) (layers "*.Cu" "*.Mask"))
+	(fp_line (start -8.6 -2.1) (end 8.6 -2.1) (stroke (width 0.05) (type solid)) (layer "F.CrtYd"))
+	(fp_line (start 8.6 -2.1) (end 8.6 2.1) (stroke (width 0.05) (type solid)) (layer "F.CrtYd"))
+	(fp_line (start 8.6 2.1) (end -8.6 2.1) (stroke (width 0.05) (type solid)) (layer "F.CrtYd"))
+	(fp_line (start -8.6 2.1) (end -8.6 -2.1) (stroke (width 0.05) (type solid)) (layer "F.CrtYd"))
+	(fp_line (start -5 -1.8) (end 5 -1.8) (stroke (width 0.1) (type solid)) (layer "F.Fab"))
+	(fp_line (start 5 -1.8) (end 5 1.8) (stroke (width 0.1) (type solid)) (layer "F.Fab"))
+	(fp_line (start 5 1.8) (end -5 1.8) (stroke (width 0.1) (type solid)) (layer "F.Fab"))
+	(fp_line (start -5 1.8) (end -5 -1.8) (stroke (width 0.1) (type solid)) (layer "F.Fab"))
+	(model "${KICAD10_3DMODEL_DIR}/Resistor_THT.3dshapes/R_Axial_DIN0414_L11.9mm_D4.5mm_P15.24mm_Horizontal.step"
+		(offset
+			(xyz -7.62 0 0)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz 0 0 0)
+		)
+	)
+)

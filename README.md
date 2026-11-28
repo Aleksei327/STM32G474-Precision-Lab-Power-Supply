@@ -104,15 +104,26 @@ The schematic is an A1 sheet. Open the SVG directly for lossless zoom.
 
 ## Boards
 
-Two home-etched single-sided boards: a main board of about 260 × 152 mm and an auxiliary flyback board that generates the +67 V / −5 V rails for the post-regulator. Connections that cannot be routed on one copper layer are made with 25 documented wire jumpers.
+Two boards in one KiCad file: a 4-layer main board of about 201 × 116 mm and an auxiliary flyback board of about 34 × 82 mm that generates the +67 V / −5 V rails for the post-regulator. The +12 V auxiliary supply comes from a separate small **55 → 12 V board** (UC3845 buck, its own KiCad project) — the on-board MP9486A stage of the first revision was removed.
 
 [![Both boards, top view](docs/images/boards-3d-overview.png)](docs/pcb.md)
 
 ![Copper side of the etched main board](docs/images/bench-copper-side.jpg)
 
-*Copper side of the etched and assembled main board.*
+*Copper side of the etched and assembled first-revision main board.*
 
-[More views, layout details and the conventions used → PCB page](docs/pcb.md)
+[More views, layout details and the conventions used → PCB page](docs/pcb.md) · [55 → 12 V board](docs/power-55-12v.md)
+
+## Reducing output noise — plans for the next revision
+
+What the bring-up showed and what the next board revision will change to bring the output noise down further:
+
+- **Re-arrange the DC-DC (buck) and the linear stage** so that the high-current switching loops are as short and as small as possible — smaller loops mean less ringing and less magnetic pick-up into the regulator and the measurement circuits.
+- **Common-mode filter at the buck output** (in VDRAIN and its return) so that switching noise does not ride on the ground into the precision part.
+- **Split the ground into two zones joined only through that filter:**
+  - *buck ground* — from the 55 V input up to the switch driver (input capacitors, switches, driver, buck inductor and its capacitors);
+  - *quiet ground* — everything after the switches: the controller and all its circuitry, the DAC and reference, INA228, the OPA454 linear stage and the shunt;
+  - on the buck ground stay only the sensors of the primary voltages and the buck voltage, plus the fans and the relays.
 
 ## How it works
 
@@ -129,11 +140,12 @@ The output stage also includes reverse-polarity detection, external-voltage dete
 - [System architecture and protection design](docs/architecture.md)
 - [Auxiliary +67 V / −5 V flyback converter](docs/auxiliary-flyback.md)
 - [PCB design and boards](docs/pcb.md)
+- [55 → 12 V auxiliary supply board](docs/power-55-12v.md)
 - [Русская техническая документация](README.ru.md)
 
 ## Hardware sources
 
-The complete KiCad 10 project is in [`hardware/`](hardware/README.md): schematic, layout, the project footprint library, hand-written 3D models with the Python scripts that generate them, and the SKiDL script the netlist is built from.
+The complete KiCad 10 project is in [`hardware/`](hardware/README.md): schematic, layout, the project footprint library, hand-written 3D models with the Python scripts that generate them, and the SKiDL script the netlist is built from. The 55 → 12 V board is in [`hardware/55-12V/`](hardware/55-12V/).
 
 ⚠️ The boards are drawn for home etching: **every drill hole in the file is a 0.6 mm pilot** that is opened up by hand afterwards. Restore the real diameters before sending these files to a fab.
 

@@ -4,27 +4,27 @@
 
 KiCad 10 project for the 0–50 V precision laboratory power supply. Open `POWER_0-50.kicad_pro`; the project-local footprint library resolves through `${KIPRJMOD}`, so no global library setup is needed.
 
-> **Work in progress, published as-is.** The schematic and the layout are complete for this revision, but no board has been built or tested. Expect to find mistakes, and read [`docs/pcb.md`](../docs/pcb.md) before reusing anything — in particular the 0.6 mm pilot-hole convention, which will ruin a fab order if left as it is.
+> **Work in progress, published as-is.** The first revision has been built and is working; this is revision v0.2.61 with the bring-up fixes merged, not yet fabricated. Expect to find mistakes, and read [`docs/pcb.md`](../docs/pcb.md) before reusing anything — in particular the 0.6 mm pilot-hole convention, which will ruin a fab order if left as it is.
 
 ## Files
 
 | Path | What it is |
 | --- | --- |
 | `POWER_0-50.kicad_sch` | schematic, single sheet (A1) |
-| `POWER_0-50.kicad_pcb` | layout: 2 boards, 207 footprints, single-sided copper plus wire jumpers |
-| `Library.pretty/` | 21 project footprints (see below) |
-| `Library.3dshapes/` | 16 hand-written 3D models plus the Python generators that produce them |
+| `POWER_0-50.kicad_pcb` | layout: 2 boards, 235 footprints, 4-layer main board (revision v0.2.61) |
+| `Library.pretty/` | 28 project footprints (see below) |
+| `Library.3dshapes/` | 17 hand-written 3D models plus the Python generators that produce them |
 | `netlist/lab_psu_skidl.py` | SKiDL script that generates the netlist — the electrical source of truth |
 | `netlist/lab_psu.net` | generated netlist, the reference the schematic and the PCB are checked against |
 | `netlist/lab_psu_chips.kicad_sym` | symbols for the parts KiCad does not ship |
-| `jumper-wires.txt` | assembly list of the 25 wire jumpers with coordinates and lengths |
+| `55-12V/` | separate KiCad project of the 55 → 12 V auxiliary supply board with its footprints and 3D models — see [docs/power-55-12v.md](../docs/power-55-12v.md) |
 
 ## Project footprint library
 
 Everything that is either not in the stock libraries or had to be adapted for hand assembly:
 
 - **Modules:** WeAct STM32G474CEU6 core board, Adafruit-style INA228 breakout (its screw terminal shares pad numbers with the header pins, so a wire can be soldered to whichever is convenient).
-- **HSOP-8 with exposed pad, hand-solder pads:** `UCC27211` (EP → GND), `MP9486A` (EP → GND), `OPA454` (**EP → V− = −5 V**, not ground — see the datasheet).
+- **HSOP-8 with exposed pad, hand-solder pads:** `UCC27211` (EP → GND), `OPA454` (**EP → V− = −5 V**, not ground — see the datasheet).
 - **Mechanical parts as real footprints:** three heatsinks, the constantan shunt staple, the flyback transformer on its measured bobbin, relays, the wound toroids, a THT NTC.
 - Wide-pad SOIC-8/16 variants and various through-hole passives for parts that dissipate more than an SMD package can take.
 

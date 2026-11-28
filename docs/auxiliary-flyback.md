@@ -8,7 +8,7 @@ The OPA454 linear regulator needs an upper rail above the maximum output voltage
 
 | Parameter | Design value |
 | --- | --- |
-| Input | +12 V from the MP9486 converter |
+| Input | +12 V from the [55 → 12 V board](power-55-12v.md) |
 | Positive raw output | approximately +67 V, regulated, up to about 20 mA |
 | Negative raw output | approximately −5 V, cross-regulated, up to about 15 mA |
 | Output power | approximately 1.5 W, designed with margin toward 2 W |
