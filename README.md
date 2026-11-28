@@ -104,7 +104,9 @@ The schematic is an A1 sheet. Open the SVG directly for lossless zoom.
 
 ## Boards
 
-Two boards in one KiCad file: a 4-layer main board of about 201 × 116 mm and an auxiliary flyback board of about 34 × 82 mm that generates the +67 V / −5 V rails for the post-regulator. The +12 V auxiliary supply comes from a separate small **55 → 12 V board** (UC3845 buck, its own KiCad project) — the on-board MP9486A stage of the first revision was removed.
+Two home-etched boards in one KiCad file: a single-sided main board of about 201 × 116 mm and an auxiliary flyback board of about 34 × 82 mm that generates the +67 V / −5 V rails for the post-regulator. The +12 V auxiliary supply comes from a separate small **55 → 12 V board** (UC3845 buck, its own KiCad project) — the on-board MP9486A stage of the first revision was removed.
+
+**Single-sided:** the only etched copper is the bottom layer (B.Cu). The tracks drawn on F.Cu, In1.Cu and In2.Cu are **not copper layers** — they document the hand-wired wire jumpers and twisted pairs, layer by layer; everything on them is wired by hand.
 
 [![Both boards, top view](docs/images/boards-3d-overview.png)](docs/pcb.md)
 

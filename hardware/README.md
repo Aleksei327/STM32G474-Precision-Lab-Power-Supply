@@ -11,7 +11,7 @@ KiCad 10 project for the 0–50 V precision laboratory power supply. Open `POWER
 | Path | What it is |
 | --- | --- |
 | `POWER_0-50.kicad_sch` | schematic, single sheet (A1) |
-| `POWER_0-50.kicad_pcb` | layout: 2 boards, 235 footprints, 4-layer main board (revision v0.2.61) |
+| `POWER_0-50.kicad_pcb` | layout: 2 boards, 235 footprints, single-sided main board (B.Cu); F.Cu / In1.Cu / In2.Cu show hand-wired jumpers and twisted pairs, not copper (revision v0.2.61) |
 | `Library.pretty/` | 28 project footprints (see below) |
 | `Library.3dshapes/` | 17 hand-written 3D models plus the Python generators that produce them |
 | `netlist/lab_psu_skidl.py` | SKiDL script that generates the netlist — the electrical source of truth |

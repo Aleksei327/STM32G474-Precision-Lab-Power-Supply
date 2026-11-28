@@ -2,13 +2,13 @@
 
 [Русская версия](pcb.ru.md) · [Back to the project overview](../README.md)
 
-> **Status:** both boards have been etched and assembled (November 2026) and the device is working; see the photos in the [README](../README.md). The files and renders on this page are the **v0.2.61 revision (November 2026)**: the main board is now a 4-layer layout with the bring-up fixes merged, and the on-board MP9486A 55 → 12 V stage is replaced by a separate [55 → 12 V board](power-55-12v.md).
+> **Status:** both boards have been etched and assembled (November 2026) and the device is working; see the photos in the [README](../README.md). The files and renders on this page are the **v0.2.61 revision (November 2026)**: the bring-up fixes are merged, and the on-board MP9486A 55 → 12 V stage is replaced by a separate [55 → 12 V board](power-55-12v.md).
 
 ## Two boards
 
 | Board | Size | Contents |
 | --- | --- | --- |
-| Main board | approximately 201 × 116 mm, 4 copper layers | synchronous buck stage, C–L–C filter, linear post-regulator, metering, protection, output relays, STM32G474 module, +12 V input J13 |
+| Main board | approximately 201 × 116 mm, single-sided (B.Cu) + hand-wired jumpers | synchronous buck stage, C–L–C filter, linear post-regulator, metering, protection, output relays, STM32G474 module, +12 V input J13 |
 | Auxiliary board | approximately 34 × 82 mm | UC3845 flyback that generates the +67 V and −5 V rails for the OPA454 post-regulator |
 | [55 → 12 V board](power-55-12v.md) | approximately 74 × 41 mm, separate KiCad project | UC3845 buck that supplies +12 V from the 55 V rail |
 
@@ -26,7 +26,9 @@ Both toroidal inductors are ATX-salvage cores, wound and measured rather than bo
 
 ## Copper layers
 
-The first revision was etched at home on single-sided copper with 25 wire jumpers. Since v0.2.61 the main board is a **4-layer** layout (F.Cu, In1.Cu, In2.Cu, B.Cu), so the jumper list is gone.
+The board is etched at home and is **single-sided: the only copper is B.Cu**. KiCad shows four copper layers, but **F.Cu, In1.Cu and In2.Cu are not copper** — they are used to draw the hand-wired connections layer by layer: insulated wire jumpers and twisted pairs (sense lines and other sensitive pairs). Everything on these three layers is wired by hand on the component side, routed clear of the switching node and the inductors; the same note is on the board itself (User.Comments).
+
+⚠️ If you send these files to a fab, export **only B.Cu** as copper (plus the drill and the outline) — otherwise the jumper drawings will be etched as real tracks.
 
 ![Solder side](images/boards-3d-solder-side.png)
 
